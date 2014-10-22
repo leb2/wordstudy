@@ -1,0 +1,122 @@
+/* line 13, ../sass/screen.scss */
+html {
+  background: #434345;
+}
+
+/* line 17, ../sass/screen.scss */
+.hidden {
+  display: none;
+}
+
+/* line 21, ../sass/screen.scss */
+#question {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+/* line 25, ../sass/screen.scss */
+#question #title, #question #choices, #question #score {
+  text-align: center;
+}
+/* line 29, ../sass/screen.scss */
+#question #title {
+  margin-bottom: 50px;
+  width: 300px;
+  text-transform: uppercase;
+  font-size: 25px;
+  border-bottom: 1px solid #888;
+  padding: 8px;
+}
+/* line 39, ../sass/screen.scss */
+#question #choices .choice {
+  max-width: 100%;
+  padding: 15px;
+  border: 1px solid #888;
+  background: none;
+  width: 500px;
+  margin-bottom: 4px;
+  outline: 0;
+  display: block;
+}
+/* line 50, ../sass/screen.scss */
+#question #choices .choice:focus, #question #choices .choice:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+/* line 54, ../sass/screen.scss */
+#question #choices .choice:active {
+  background: rgba(0, 0, 0, 0.1);
+}
+/* line 58, ../sass/screen.scss */
+#question #choices .choice.correct {
+  border: 1px solid #577860;
+}
+/* line 61, ../sass/screen.scss */
+#question #choices .choice.incorrect {
+  border: 1px solid #945A57;
+}
+/* line 64, ../sass/screen.scss */
+#question #choices .incorrect, #question #choices .correct, #question #choices .incorrect:hover, #question #choices .correct:hover {
+  background: rgba(0, 0, 0, 0.1) !important;
+}
+/* line 69, ../sass/screen.scss */
+#question #title, #question .choice, #question #results, #question #score {
+  color: #eee;
+  font-family: 'Raleway';
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 76, ../sass/screen.scss */
+#question #results {
+  position: relative;
+  margin-top: 50px;
+  text-align: center;
+  width: 400px;
+}
+/* line 82, ../sass/screen.scss */
+#question #results .bar {
+  position: absolute;
+  height: 2px;
+}
+/* line 86, ../sass/screen.scss */
+#question #results .bar#bottom {
+  background: #ba6565;
+  width: 100%;
+}
+/* line 90, ../sass/screen.scss */
+#question #results .bar#top {
+  background: #659eba;
+  width: 50%;
+}
+/* line 95, ../sass/screen.scss */
+#question #results #difficulty {
+  text-transform: uppercase;
+  font-size: 12px;
+  position: relative;
+  top: 10px;
+  color: #bbb;
+}
+/* line 104, ../sass/screen.scss */
+#question #score {
+  color: white;
+  margin-top: 25px;
+  font-size: 28px;
+}
+/* line 106, ../sass/screen.scss */
+#question #score .bar {
+  color: #999;
+}
+
+/* line 116, ../sass/screen.scss */
+#footer-text {
+  position: absolute;
+  bottom: 5px;
+  right: 20px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+/* line 122, ../sass/screen.scss */
+#footer-text a {
+  color: #476680;
+}

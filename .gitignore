@@ -1,0 +1,4 @@
+settings.py
+*.sqlite3
+*.pyc
+*.swp

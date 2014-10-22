@@ -1,0 +1,132 @@
+@mixin vertical-align {
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+$incorrect-color: #BA6565;
+$correct-color: #659EBA;
+
+
+html {
+	background: #434345;
+}
+
+.hidden {
+	display: none;
+}
+
+#question {
+	width: 100%;
+	@include vertical-align;
+
+	#title, #choices, #score {
+		text-align: center;
+	}
+
+	#title {
+		margin-bottom: 50px;
+		width: 300px;
+		text-transform: uppercase;
+		font-size: 25px;
+		border-bottom: 1px solid #888;
+		padding: 8px;
+	}
+
+	#choices {
+		.choice {
+			max-width: 100%;
+			padding: 15px;
+			border: 1px solid #888;
+			background: none;
+			width: 500px;
+			margin-bottom: 4px;
+			outline: 0;
+			display: block;
+		}
+
+		.choice:focus, .choice:hover {
+			background: rgba(white, 0.1);
+		}
+
+		.choice:active {
+			background: rgba(black, 0.1);
+		}
+
+		.choice.correct {
+			border: 1px solid #577860;
+		}
+		.choice.incorrect {
+			border: 1px solid #945A57;
+		}
+		.incorrect, .correct, .incorrect:hover, .correct:hover {
+			background: rgba(black, 0.1) !important;
+		}
+	}
+
+	#title, .choice, #results, #score{
+		color: #eee;
+		font-family: 'Raleway';
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#results {
+		position: relative;
+		margin-top: 50px;
+		text-align: center;
+		width: 400px;
+
+		.bar {
+			position: absolute;
+			height: 2px;
+		}
+		.bar#bottom {
+			background: $incorrect-color;
+			width: 100%;
+		}
+		.bar#top {
+			background: $correct-color;	
+			width: 50%;
+		}
+
+		#difficulty {
+			text-transform: uppercase;
+			font-size: 12px;
+			position: relative;
+			top: 10px;
+			color: #bbb;
+		}
+	}
+
+	#score {
+
+		.bar {
+			color: #999;
+		}
+
+		color: white;
+		margin-top: 25px;
+		font-size: 28px;
+	}
+}
+
+#footer-text {
+	position: absolute;
+	bottom: 5px;
+	right: 20px;
+	font-family: Helvetica, Arial, sans-serif;
+
+	a {
+		color: darken(desaturate(steelblue, 15%), 10%);
+
+	}
+}
+
+
+
+
+
+

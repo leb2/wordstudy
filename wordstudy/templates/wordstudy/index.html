@@ -1,0 +1,45 @@
+{% extends "wordstudy/base.html" %}
+{% load staticfiles %}
+
+{% block head %}
+	<script src="{% static 'wordstudy/words.js' %}"></script>
+	<link href='http://fonts.googleapis.com/css?family=Raleway:100,200' rel='stylesheet' type='text/css'>
+	<link rel='stylesheet' type='text/css' href='{% static "wordstudy/stylesheets/screen.css" %}'>
+{% endblock %}
+
+
+{% block body %}
+
+	<div id='question'>
+
+		<div id='title'>
+		</div>
+
+		<div id='choices'>
+		</div>
+
+		<div id='results' class='hidden'>
+			<div class='bar' id='bottom'></div>
+			<div class='bar' id='top'></div>
+			<div id='difficulty'></div>
+		</div>
+
+		<div id='score'><span class='bar'>—</span> <span id='num'>0</span> <span class='bar'>—</span></div>
+	</div>	
+
+	<div id='urls' style='display:none'>
+		<div id='fetch'>	
+			{% url 'fetch_words' %}
+		</div>
+		<div id='send'>
+			{% url 'send_metadata' %}
+		</div>
+	</div>
+
+	<div id='footer-text'>
+		words from <a href='http://www.freevocabulary.com'>freevocabulary.com</a>
+
+	</div>
+
+
+{% endblock %}
